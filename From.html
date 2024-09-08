@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In or Sign-Up Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(116, 116, 247);
+        }
+        .form-container:hover{
+            transform: scale(1.02);
+            background-color: violet;
+        }
+        .error-message {
+            color: #dc3545;
+        }
+        #btn{
+            margin-top: 20px;
+            border: 1px solid gray;
+        }
+        #btn:hover{
+            background-color:  lightsteelblue;
+        }
+        #toggleForm{
+            color: red;
+        }
+        #toggleForm:hover{
+            color: blue;
+        }
+        h1{
+            text-align: center;
+            margin-top: 110px;
+            text-decoration: underline;
+            color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Railway recruitment 2024</h1>
+    <div class="form-container">
+        <form id="authForm">
+            <h2 id="formTitle">Sign In</h2>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+                <div id="usernameError" class="error-message"></div>
+            </div><br>
+            <div class="mb-3">
+                <label for="password" class="form-label"> Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            <button type="submit" id="btn" class="btn btn-primary">Submit</button>
+            <p class="mt-3">
+                <a href="#" id="toggleForm" class="link-primary">Don't have an account? Sign Up</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
